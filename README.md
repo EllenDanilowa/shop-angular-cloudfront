@@ -1,7 +1,7 @@
 # Shop Angular Cloudfront
 
-- [S3](http://rs-ab-shop-app.s3-website-us-east-1.amazonaws.com/)
-- [CloudFront](https://d1ksmh8q66xwc2.cloudfront.net/)
+- [S3](http://rs-ab-shop.s3-website-eu-west-1.amazonaws.com/)
+- [CloudFront](https://d14axewerpas2.cloudfront.net/)
 
 ### Commands
 - To start the app in dev mode:
