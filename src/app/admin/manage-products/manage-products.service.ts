@@ -30,9 +30,19 @@ export class ManageProductsService extends ApiService {
   }
 
   private getPreSignedUrl(fileName: string): Observable<string> {
+    const token = localStorage.getItem('auth-token');
     const url = this.getUrl('import', 'import');
+    const headers = {};
+
+    if (!token) {
+      console.warn('Token is not defined in local storage. Please set `auth-token` value.');
+    } else {
+      // @ts-ignore
+      headers.Authorization = `Basic ${token}`;
+    }
 
     return this.http.get<string>(url, {
+      headers,
       params: {
         name: fileName,
       },
